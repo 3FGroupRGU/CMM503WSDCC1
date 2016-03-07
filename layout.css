@@ -68,13 +68,13 @@ h6 {
 }
 
 #bug1 {
-    width: 10%;
-    height: 10%;
+    width: 7%;
+    height: auto;
     float: left;
 }
 
 #bug2 {
-    width: 10%;
-    height: 10%;
+    width: 7%;
+    height: auto;
     float: right;
 }
