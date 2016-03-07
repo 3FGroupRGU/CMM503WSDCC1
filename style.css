@@ -1,6 +1,6 @@
 
 .heading {
-    background-color: black;
+    background-color: #ffbb44;
     border: groove;
     border-color: aliceblue;
     width: 100%;
@@ -10,8 +10,8 @@
 
 .title {
     border: groove;
-    background-color: white;
-    color: gold;
+    background-color: black;
+    color: antiquewhite;
     width: 65%;
     height: auto;
     float: inherit;
