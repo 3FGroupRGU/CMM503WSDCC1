@@ -13,7 +13,7 @@ body {
 }
 
 #header {
-    height: 70px;
+    height: 100px;
     margin-bottom: 1px;
     background-color: black;
 }
@@ -68,13 +68,13 @@ h6 {
 }
 
 #bug1 {
-    width: 5%;
+    width: auto;
     height: auto;
     float: left;
 }
 
 #bug2 {
-    width: 5%;
+    width: auto;
     height: auto;
     float: right;
 }
