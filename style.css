@@ -8,10 +8,10 @@
     align-content: space-between;
 }
 
-h1 {
-    font-family: inherit;
-    font-weight: bold;
-    align-content: center;
+.title {
+    border: ridge;
+    border-color: #333333;
+    float: left;
 }
 
 .b1 {
