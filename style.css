@@ -1,6 +1,6 @@
 
 .heading {
-    background-color: #ffbb44;
+    background-color: black;
     border: groove;
     border-color: aliceblue;
     width: 100%;
@@ -47,6 +47,6 @@ h1 {
     height: 100%;
 }
 body {
-    background-color: black;
+    background-color: #2CC990;
     color: azure;
 }
