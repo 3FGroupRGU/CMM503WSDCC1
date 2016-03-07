@@ -9,22 +9,16 @@
 }
 
 .title {
-    border: ridge;
-    border-color: #333333;
-    float: left;
+    float: none;
     text-align: center;
 }
 
 .b1 {
-    border: groove;
-    border-color: aliceblue;
     width: 10%;
     height: auto;
     float: left;
 }
 .b2 {
-    border: groove;
-    border-color: aliceblue;
     width: 10%;
     height:auto;
     float: right;
