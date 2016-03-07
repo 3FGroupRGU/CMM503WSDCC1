@@ -27,14 +27,14 @@ h1 {
     border-color: aliceblue;
     width: 10%;
     height: 10%;
-    align-self: left;
+    float: left;
 }
 .b2 {
     border: groove;
     border-color: aliceblue;
     width: 10%;
     height: 10%;
-    align-self: right;
+    float: right;
 }
 
 .b1a {
