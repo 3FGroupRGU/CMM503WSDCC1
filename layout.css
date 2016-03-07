@@ -66,15 +66,3 @@ h6 {
     font-weight: lighter;
     font-size: 14px;
 }
-
-#bug1 {
-    width: 7%;
-    height: auto;
-    float: left;
-}
-
-#bug2 {
-    width: 7%;
-    height: auto;
-    float: right;
-}
