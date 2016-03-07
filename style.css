@@ -14,7 +14,7 @@
     color: antiquewhite;
     width: 65%;
     height: auto;
-    float: default;
+    float: left;
     text-align: center;
     font-family: inherit;
     font-weight: 400;
@@ -32,7 +32,7 @@
     border-color: aliceblue;
     width: 10%;
     height:auto;
-    float: right;
+    float: left;
 }
 
 .b1a {
