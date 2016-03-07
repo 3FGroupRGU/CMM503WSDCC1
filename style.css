@@ -14,7 +14,7 @@
     color: antiquewhite;
     width: 65%;
     height: auto;
-    align-self: center;
+    float: left;
     text-align: center;
     font-family: inherit;
     font-weight: 400;
@@ -24,14 +24,14 @@
     border: groove;
     border-color: aliceblue;
     width: 10%;
-    height: 10%;
+    height: auto;
     float: left;
 }
 .b2 {
     border: groove;
     border-color: aliceblue;
     width: 10%;
-    height: 10%;
+    height:auto;
     float: right;
 }
 
