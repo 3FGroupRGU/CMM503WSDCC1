@@ -8,16 +8,10 @@
     align-content: space-between;
 }
 
-.title {
-    border: groove;
-    background-color: black;
-    color: antiquewhite;
-    width: 75%;
-    height: auto;
-    float: left;
-    text-align: center;
+h1 {
     font-family: inherit;
-    font-weight: 800;
+    font-weight: bold;
+    align-content: center;
 }
 
 .b1 {
