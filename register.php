@@ -36,7 +36,12 @@
                 <label>Username:</label><br>
                 <input type="text" name="username" placeholder="username" /><br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" />  <br><br>
+                <input type="password" name="password" placeholder="password" />  <br>
+                <label>E-mail</label><br>
+                <input type="email" name="email" placeholder="e-mail" />
+                <br>
+                <label>Work No:</label><br>
+                <input type="tel" name="telephone" placeholder="Work Telephone" /><br><br>
                 <input class="login1" type="submit" name="submit" value="login"/>
                 <input class="register1" type="submit" name="submit" value="register"/>
             </form>
