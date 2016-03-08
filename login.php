@@ -22,11 +22,13 @@
 </div>
 <div id="content">
     <div id="pageheading">
-        <h1>Page Heading</h1>
+        <h1>Login Page</h1>
     </div>
     <div id="contentleft">
-        <h2>Your Message Here</h2><br>
-        <h6>Your Message</h6>
+        <h2>Please Login Here</h2><br>
+        <h6>Before you can look at or update any of your fault logs on this site you will have to login to the site.</h6><br>
+        <p>If you have no valid account please complete the registration form.</p><br>
+        <p>Once the registration form has been submitted it will be assessed by the IT team prior to your accessibility to the site.</p>
     </div>
     <div id="contentright">
         <div class="loginBox">
