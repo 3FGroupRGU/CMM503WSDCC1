@@ -14,9 +14,10 @@
 <div id="NavBar">
     <nav>
         <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Forgot Login</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="ForgotPassword.php">Forgot Login</a></li>
         </ul>
     </nav>
 </div>
