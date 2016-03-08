@@ -43,7 +43,6 @@
                 <label>Work No:</label><br>
                 <input type="tel" name="telephone" placeholder="Work Telephone" /><br><br>
                 <input class="login1" type="submit" name="submit" value="login"/>
-
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
