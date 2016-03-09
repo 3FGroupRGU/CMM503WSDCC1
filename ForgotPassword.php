@@ -25,7 +25,7 @@
 </div>
 <div id="content">
     <div id="pageheading">
-        <h1>Page Heading</h1>
+        <h1>Forgotten Password</h1>
     </div>
     <div id="contentleft">
         <h2>Recover Password</h2><br>
