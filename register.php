@@ -29,7 +29,7 @@
     </div>
     <div id="contentleft">
         <h2>Please register to use this service.</h2><br>
-        <h6>Complete all fields on this form to proceed.</h6>
+        <h3>Complete all fields on this form to proceed.</h3>
         <p>On completion of this form it wuill be submitted to the IT admin team for verification of your status and level within the company.
         Once you have been verified you will be permitted to upload fault files and observe the current status of your logged faults.</p>
     </div>

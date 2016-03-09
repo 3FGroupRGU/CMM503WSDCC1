@@ -29,7 +29,7 @@
     </div>
     <div id="contentleft">
         <h2>Your Message Here</h2><br>
-        <h6>Your Message</h6>
+        <h3>Your Message</h3>
     </div>
     <div id="contentright">
         <div class="loginBox">
