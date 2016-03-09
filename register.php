@@ -23,27 +23,29 @@
 </div>
 <div id="content">
     <div id="pageheading">
-        <h1>Page Heading</h1>
+        <h1>User Registration</h1>
     </div>
     <div id="contentleft">
-        <h2>Your Message Here</h2><br>
-        <h6>Your Message</h6>
+        <h2>Please register to use this service.</h2><br>
+        <h6>Complete all fields on this form to proceed.</h6>
+        <p>On completion of this form it wuill be submitted to the IT admin team for verification of your status and level within the company.
+        Once you have been verified you will be permitted to upload fault files and observe the current status of your logged faults.</p>
     </div>
     <div id="contentright">
         <div class="loginBox">
-            <h3>Login Form</h3>
+            <h3>Registration Form</h3>
             <br><br>
             <form method="post" action="login.php">
                 <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" /><br><br>
+                <input type="text" name="username" placeholder="username" required="required"/><br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" />  <br>
+                <input type="password" name="password" placeholder="password" required="required" />  <br>
                 <label>E-mail</label><br>
-                <input type="email" name="email" placeholder="e-mail" />
+                <input type="email" name="email" placeholder="e-mail" required="required" />
                 <br>
                 <label>Work No:</label><br>
-                <input type="tel" name="telephone" placeholder="Work Telephone" /><br><br>
-                <input class="login1" type="submit" name="submit" value="login"/>
+                <input type="tel" name="telephone" placeholder="Work Telephone" required="required" /><br><br>
+                <input class="login1" type="submit" name="submit" value="Register"/>
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 
