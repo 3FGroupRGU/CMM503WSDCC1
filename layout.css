@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #eeeeee;
+    background-color: #ffbbaa;
 }
 
 #holder {
@@ -20,7 +20,7 @@ body {
 }
 #NavBar {
     height: 60px;
-    background-color: #222222;
+    background-color: violet;
 }
 #content {
     height: auto;

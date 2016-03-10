@@ -21,10 +21,10 @@ nav ul li a {
 }
 
 nav ul li:hover {
-    background-color: #aaaaaa;
+    background-color: blueviolet;
 }
 
 nav ul li:hover a {
     display:block;
-    color:black;
+    color: #222222;
 }
