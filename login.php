@@ -11,7 +11,7 @@
 <body>
 <div id="holder"></div>
 <div id="header">
-        <title>General Buginess Fault Tracker</title>
+    <h1>General Buginess Fault Tracker</h1>
 </div>
 <div id="NavBar">
     <nav>
