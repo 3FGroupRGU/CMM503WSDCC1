@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffbbaa;
+    background-color: coral;
 }
 
 #holder {
@@ -16,11 +16,11 @@ body {
 #header {
     height: 100px;
     margin-bottom: 1px;
-    background-color: black;
+    background-color: #ffbbaa;
 }
 #NavBar {
     height: 60px;
-    background-color: violet;
+    background-color: brown;
 }
 #content {
     height: auto;
