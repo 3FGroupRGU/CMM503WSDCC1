@@ -41,8 +41,6 @@
                 <input type="text" name="username" placeholder="username" required="required"/><br><br>
                 <label>Password:</label><br>
                 <input type="password" name="password" placeholder="password" required="required"/> <br>
-                <label>Confirm Password:</label><br>
-                <input type="password" name="password" placeholder="password" required="required"/> <br>
                 <br>
                 <input class="login1" type="submit" name="submit" value="Recover"/>
             </form>
