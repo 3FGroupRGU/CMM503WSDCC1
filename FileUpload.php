@@ -57,7 +57,7 @@
 	$FileSize = $_FILES ['UploadFileField']['size'];
 	
 	// Remove Unwanted Spaces and characters from the files name of the files being uploaded.
-	$UploadName = preg_replace ("#[^a-z0-9.]#i", **, $UploadName);
+	$UploadName = preg_replace ("#[^a-z0-9.]#i", "", $UploadName);
 	// Upload File Size Limit
 	if(($FileSize > 125000)) {
 		die("Error - File too Big");
