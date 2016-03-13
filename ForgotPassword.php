@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['FirstName'])){
+    ///your code here
+}
+$_SESSION = array ();
+session_destroy ();
+$_SESSION['foo'] = 'bar';
+print $_SESSION ['foo'];
+unset ($_SESSION ['foo']);
+?>
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
