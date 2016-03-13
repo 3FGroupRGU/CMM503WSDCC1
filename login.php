@@ -2,6 +2,21 @@
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
 <head>
+    <?php
+    function login($username, $password) {
+    $userpass = sha1($password);
+    $result = mysqli_query($con, "SELECT * FROM members WHERE username='$username' AND password='$userpass'");
+    while($row = mysqli_fetch_array($result)) {
+    $success = true;
+    }
+    if($success == true) {
+    $_SESSION['username']= $username;
+    //redirect to home page
+    } else {
+    echo '<div class="alert alert-danger">Oops! It looks like your username and/or password are incorrect. Please try again.</div>';
+    }
+    } // END LOGIN FUNCTION
+    ?>
     <meta charset="utf-8">
     <title>General Bugginess</title>
     <link rel="stylesheet" href="layout.css" type="text/css" />
