@@ -35,7 +35,6 @@
             <li><a href="login.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
             <li><a href="ForgotPassword.php">Forgot Login</a></li>
-            <li><a href="FileUpload.php">Upload Files</a></li>
         </ul>
     </nav>
 </div>
