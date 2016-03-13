@@ -81,3 +81,13 @@ title {
     color: darkred;
     font-size: large;
 }
+
+.fileuploadholder {
+    width: 400px;
+    height: 200px;
+    margin: 60px auto 0px auto;
+    background-color: #ffbb44;
+    border: 2px;
+    border-color: brown;
+    padding: 4px;
+}
