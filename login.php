@@ -14,19 +14,23 @@ unset ($_SESSION ['foo']);
 <html>
 <head>
     <?php
-    function login($username, $password) {
-    $userpass = sha1($password);
-    $result = mysqli_query($con, "SELECT * FROM members WHERE username='$username' AND password='$userpass'");
-    while($row = mysqli_fetch_array($result)) {
-    $success = true;
-    }
-    if($success == true) {
-    $_SESSION['username']= $username;
-    //redirect to home page
+        require_once 'connect.php';
+            include("connect.php"); //Establishing connection to our database
+        if (empty($_POST ["username"]) || empty($_POST ["password"])) {
+    echo "Both fields are required.";
+} else {
+    $username = $_POST ["username"];
+    $password = $_POST ["password"];
+    echo $username;
+    echo $password;
+    $MySql = "SELECT * FROM users WHERE username='$username' and password='$password'";
+    $result = mysqli_query($db, $MySql);
+    if (mysqli_num_rows($result) == 1) {
+        header("location: FileUpload.php"); // Redirecting to another page
     } else {
-    echo '<div class="alert alert-danger">Oops! It looks like your username and/or password are incorrect. Please try again.</div>';
+        echo "Incorrect username or password";
     }
-    } // END LOGIN FUNCTION
+}
     ?>
     <meta charset="utf-8">
     <title>General Bugginess</title>
