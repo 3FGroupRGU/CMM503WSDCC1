@@ -10,6 +10,7 @@ if (ini_get("session.use_cookies")){
 }
 session_destroy()
 ?>
+
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
@@ -67,13 +68,15 @@ session_destroy()
         <div class="loginBox">
             <h3>Login Form</h3>
             <br><br>
-            <form method="post" action="login.php">
+            <form class="form1" method="post" action="login.php">
                 <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" /><br><br>
+                <input type="text" name="username" placeholder="username" />
+                <br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" />  <br>
-                <br>
+                <input type="password" name="password" placeholder="password" />
+                <br><br>
                 <input class="login1" type="submit" name="submit" value="login"/>
+                <input type="reset" value="New">
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
