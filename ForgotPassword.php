@@ -1,14 +1,20 @@
 <?php
 session_start();
-if (isset($_SESSION['FirstName'])){
-    ///your code here
+$_SESSION=array();
+if (ini_get("session.use_cookies")){
+    $params=session_get_cookie_params();
+    setcookie(session_name(), '',time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
 }
-$_SESSION = array ();
-session_destroy ();
-$_SESSION['foo'] = 'bar';
-print $_SESSION ['foo'];
-unset ($_SESSION ['foo']);
+session_destroy()
 ?>
+echo '
+<?php
+
+?>
+
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
