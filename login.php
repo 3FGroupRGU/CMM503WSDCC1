@@ -14,17 +14,16 @@ unset ($_SESSION ['foo']);
 <html>
 <head>
     <?php
-        require_once 'connect.php';
             include("connect.php"); //Establishing connection to our database
         if (empty($_POST ["username"]) || empty($_POST ["password"])) {
     echo "Both fields are required.";
 } else {
-    $username = $_POST ["username"];
-    $password = $_POST ["password"];
+    $username = $_POST ['username'];
+    $password = $_POST ['password'];
     echo $username;
     echo $password;
-    $MySql = "SELECT * FROM users WHERE username='$username' and password='$password'";
-    $result = mysqli_query($db, $MySql);
+    $sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
+    $result=mysqli_query($db,$sql);
     if (mysqli_num_rows($result) == 1) {
         header("location: FileUpload.php"); // Redirecting to another page
     } else {
