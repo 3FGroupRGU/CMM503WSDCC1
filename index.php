@@ -15,7 +15,7 @@ session_destroy()
 <html>
 <head>
     <meta charset="utf-8">
-    <title>General Bugginess</title>
+    <title>Ginger Bugginess</title>
     <link rel="stylesheet" href="layout.css" type="text/css" />
     <link rel="stylesheet" href="menu.css" type="text/css" />
 </head>
@@ -23,7 +23,7 @@ session_destroy()
 <body>
 <div id="holder"></div>
 <div id="header">
-        <h1>General Buginess Fault Tracker</h1>
+    <h1>Ginger Bugginess Fault Tracker</h1>
 </div>
 <div id="NavBar">
     <nav>
@@ -40,7 +40,7 @@ session_destroy()
         <h1>Welcome</h1>
     </div>
     <div id="contentleft">
-        <h2>Welcome to the General Bugginess fault logging page.</h2><br>
+        <h2>Welcome to the Ginger Bugginess fault logging page.</h2><br>
         <h3>Before you begin.</h3><br>
         <p>This site is for registered and authorised users only. On this site you can upload your fault logs or enter a new fault manually. The status of which will be assessed and updated by the IT team as they work through their call logs.</p><br>
         <p>Please login or register to continue on this site.</p>

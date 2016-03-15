@@ -34,7 +34,7 @@ session_destroy()
 }
     ?>
     <meta charset="utf-8">
-    <title>General Bugginess</title>
+    <title>Ginger Bugginess</title>
     <link rel="stylesheet" href="layout.css" type="text/css" />
     <link rel="stylesheet" href="menu.css" type="text/css" />
 </head>
@@ -42,7 +42,7 @@ session_destroy()
 <body>
 <div id="holder"></div>
 <div id="header">
-    <h1>General Buginess Fault Tracker</h1>
+    <h1>Ginger Bugginess Fault Tracker</h1>
 </div>
 <div id="NavBar">
     <nav>
