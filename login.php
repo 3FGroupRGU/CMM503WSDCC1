@@ -40,7 +40,7 @@ if(isset($_POST["submit"]))
         if(mysqli_num_rows($result) == 1)
         {
             $_SESSION['username'] = $username; // Initializing Session
-            header("location: home.php"); // Redirecting To Other Page
+            header("location: FileUpload.php"); // Redirecting To Other Page
         }else
         {
             $error = "Incorrect username or password.";
