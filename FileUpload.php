@@ -70,7 +70,7 @@ if(isset($_FILES['UploadFileField'])) {
 	<div id="contentright">
 		<div class="fileuploadholder">
 			<form action="FileUpload.php" method="POST" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
-				<label for="UploadFileField"></label>
+				<label for="UploadFileField"><h2>Upload Your Bugs</h2></label>
 				<input type="file" name="UploadFileField" id="UploadFileField" />
 				<input type="submit" name="UploadButton" id="UploadButton" value="Upload"/>
 			</form>
@@ -90,10 +90,13 @@ if(isset($_FILES['UploadFileField'])) {
 				?>
 			</div>
 			<div class="comments">
-				<form action="FileUpload.php" method="POST">
+				<form action="FileUpload.php" method="POST" id="FileUploadForm">
 					<dl>
-						<><textarea tows="5" cols="20" name="comment"</textarea></dl>
-						<input type="submit" name="submit" value="Comment">
+						<dt>Comment:</dt>
+						<dd>
+							<textarea rows="5" cols="20" name="comments"></textarea>
+						</dd>
+					</dl>
 				</form>
 			</div>
 		</div>
