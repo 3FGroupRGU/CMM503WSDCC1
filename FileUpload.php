@@ -94,7 +94,7 @@ if(isset($_FILES['UploadFileField'])) {
 					<dl>
 						<dt>Comment:</dt>
 						<dd>
-							<textarea rows="5" cols="20" name="comments"></textarea>
+							<textarea name="comments"></textarea>
 						</dd>
 					</dl>
 				</form>
