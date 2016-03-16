@@ -89,6 +89,14 @@ if(isset($_FILES['UploadFileField'])) {
 					}
 				?>
 			</div>
+			<div class="comments">
+				<form action="FileUpload.php" method="POST">
+					<dl>
+						<dd><textarea tows="5" cols="20" name="comment"</textarea></dd>
+					</dl>
+						<input type="submit" name="submit" value="Comment">
+				</form>
+			</div>
 		</div>
 		<div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 	</div>
