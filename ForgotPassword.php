@@ -10,10 +10,6 @@ if (ini_get("session.use_cookies")){
 }
 session_destroy()
 ?>
-echo '
-<?php
-
-?>
 
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->

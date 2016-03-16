@@ -75,6 +75,21 @@ if(isset($_FILES['UploadFileField'])) {
 				<input type="submit" name="UploadButton" id="UploadButton" value="Upload"/>
 			</form>
 		</div>
+		<div class="buglisting">
+			<h1>Ginger Bug List</h1>
+			<div id="bugcontent">
+				<?php
+					include("connect.php");
+					$sql="SELECT * FROM bugs";
+					$result=mysqli_query($db,$sql);
+					while($row=mysqli_fetch_assoc($result)){
+						$bugTitle=$row['title'];
+						$bugID=$row['ID'];
+						echo '<a href="bug.php?id="'.$bugID.'>'.$bugTitle.'</a></br>';
+					}
+				?>
+			</div>
+		</div>
 		<div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 	</div>
 </div>
