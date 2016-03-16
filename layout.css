@@ -91,3 +91,25 @@ title {
     border-color: brown;
     padding: 4px;
 }
+
+.buglisting {
+    width: 400px;
+    height: auto;
+    margin: 60px auto 0px auto;
+    background-color: #ffbb44;
+    border: groove;
+    border: 2px;
+    border-color: brown;
+    padding: 4px;
+}
+
+.bugcontent {
+    width: 100%;
+    height: auto;
+    margin: 60px auto 0px auto;
+    background-color: #e5e5e5;
+    border: 2px;
+    border-color: brown;
+    padding: 4px;
+}
+
