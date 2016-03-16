@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+include("connect.php");
+include("submit.php");
+
 $_SESSION=array();
 if (ini_get("session.use_cookies")){
     $params=session_get_cookie_params();

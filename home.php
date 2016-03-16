@@ -1,12 +1,18 @@
+<?php
+	include("check.php");	
+?>
+
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="layout.css" type="text/css" />
+<meta charset="utf-8">
+<title>Home</title>
+<link rel="stylesheet" href="layout.css" type="text/css" />
 </head>
 
 <body>
-<h1>Hello my lovely. What you doing here then?</h1>
-
+<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
+<br><br><br>
+<a href="LogOut.php" style="font-size:18px">Logout?</a>
 </body>
 </html>
