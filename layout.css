@@ -93,6 +93,7 @@ title {
 }
 
 .buglisting {
+    text-align: center;
     width: 400px;
     height: auto;
     margin: 60px auto 0px auto;
