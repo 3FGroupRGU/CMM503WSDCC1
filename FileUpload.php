@@ -92,8 +92,7 @@ if(isset($_FILES['UploadFileField'])) {
 			<div class="comments">
 				<form action="FileUpload.php" method="POST">
 					<dl>
-						<dd><textarea tows="5" cols="20" name="comment"</textarea></dd>
-					</dl>
+						<><textarea tows="5" cols="20" name="comment"</textarea></dl>
 						<input type="submit" name="submit" value="Comment">
 				</form>
 			</div>
