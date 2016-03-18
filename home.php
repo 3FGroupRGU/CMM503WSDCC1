@@ -14,6 +14,9 @@
 </head>
 
 <body>
+<div id="header">
+	<h1>Ginger Bugginess Fault Tracker</h1>
+</div>
 <div id="NavBar">
 <nav>
 	<ul>
