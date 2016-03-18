@@ -1,8 +1,5 @@
 <?php
-	session_start();
-	require('connect.php');
 	require('check.php');
-	session_destroy()
 ?>
 <!doctype html>
 <html>
