@@ -9,7 +9,6 @@ if (ini_get("session.use_cookies")){
     );
 }
 include("connect.php"); //Establishing connection with our database
-include("check.php"); // Check user login status
 
 $error = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
