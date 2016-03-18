@@ -9,6 +9,7 @@ if (ini_get("session.use_cookies")){
     );
 }
 include("connect.php"); //Establishing connection with our database
+include("check.php"); // Check user login status
 
 $error = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
@@ -40,10 +41,11 @@ if(isset($_POST["submit"]))
         if(mysqli_num_rows($result) == 1)
         {
             $_SESSION['username'] = $username; // Initializing Session
-            header("location: FileUpload.php"); // Redirecting To Other Page
+            header("location: home.php"); // Redirecting To Other Page
         }else
         {
             $error = "Incorrect username or password.";
+            header("location: login.php");// Refresh to this page
         }
 
     }
@@ -98,7 +100,7 @@ session_destroy()
                 <input type="password" name="password" placeholder="password" />
                 <br><br>
                 <input class="login1" type="submit" name="submit" value="login"/>
-                <input type="reset" value="New">
+                <input type="reset" value="Clear">
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
