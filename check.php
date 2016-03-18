@@ -1,5 +1,4 @@
 <?php
-include('connect.php');
 session_start();
 $user_check=$_SESSION['username'];
 
@@ -13,4 +12,5 @@ if(!isset($user_check))
 {
 header("Location: home.php");
 }
+session_destroy()
 ?>
