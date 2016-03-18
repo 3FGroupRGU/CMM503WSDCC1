@@ -1,4 +1,9 @@
-
+<?php
+	session_start();
+	include('connect.php');
+	$_SESSION['username']= $username;
+	session_destroy()
+?>
 <!doctype html>
 <html>
 <head>
