@@ -44,7 +44,6 @@ if(isset($_POST["submit"]))
         }else
         {
             $error = "Incorrect username or password.";
-            header("location: login.php");// Refresh to this page
         }
 
     }
