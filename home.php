@@ -8,7 +8,7 @@
 </head>
 
 <body>
-iv id="NavBar">
+<div id="NavBar">
 <nav>
 	<ul>
 		<li><a href="index.php">Home</a></li>
