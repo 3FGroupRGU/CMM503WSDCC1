@@ -27,9 +27,3 @@
 </body>
 
 </html>
-/**
- * Created by PhpStorm.
- * User: 1300427
- * Date: 16/03/2016
- * Time: 15:37
- */
