@@ -4,6 +4,7 @@ session_start();
 include("connect.php");
 include("submit.php");
 
+
 session_destroy()
 ?>
 <!doctype html>
@@ -49,9 +50,9 @@ session_destroy()
                 <label>Username:</label><br>
                 <input type="text" size="25" name="username" placeholder="username" required="required"/><br><br>
                 <label>Password:</label><br>
-                <input type="password" size="25" name="password" placeholder="password" required="required" /> <br>
-                <input type="email" size="25" name="email" placeholder="e-mail" required="required" /><br>
-                <br>
+                <input type="password" size="25" name="password" placeholder="password" required="required" /> <br><br>
+                <label>E-mail</label><br>
+                <input type="email" size="25" name="email" placeholder="e-mail" required="required" /><br><br>
                 <label>Work No:</label><br>
                 <input type="tel" name="telephone" placeholder="Work Telephone" required="required" /><br><br>
                 <input class="login1" type="submit" name="submit" value="Register"/>
