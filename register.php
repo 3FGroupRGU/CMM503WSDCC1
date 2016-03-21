@@ -58,12 +58,7 @@ session_destroy()
                 <input type="text" size="25" name="username" placeholder="username" required="required"/><br><br>
                 <label>Password:</label><br>
                 <input type="password" size="25" name="password" placeholder="password" required="required" /> <br>
-                <label>Confirm Password:</label><br>
-                <input type="password" size="25" name="password" placeholder="password" required="required"/> <br>
-                <label>E-mail</label><br>
                 <input type="email" size="25" name="email" placeholder="e-mail" required="required" /><br>
-                <label>Confirm E-mail:</label><br>
-                <input type="email" size="25" name="email" placeholder="e-mail" required="required"/><br>
                 <br>
                 <label>Work No:</label><br>
                 <input type="tel" name="telephone" placeholder="Work Telephone" required="required" /><br><br>
