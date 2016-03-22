@@ -18,7 +18,7 @@ session_destroy()
 </head>
 
 <body>
-<div id="holder"></div>
+<div id="holder">
 <div id="header">
     <h1>Ginger Bugginess Fault Tracker</h1>
 </div>
@@ -61,6 +61,7 @@ session_destroy()
 
         </div>
     </div>
+</div>
 </div>
 <div id="footer"></div>
 </body>
