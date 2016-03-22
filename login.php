@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
 
 {
@@ -36,6 +36,7 @@ session_destroy()
 ?>
 
 <!doctype html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
@@ -72,14 +73,14 @@ session_destroy()
         <div class="loginBox">
             <h3>Login Form</h3>
             <br><br>
-            <form class="form1" method="post" action="login.php">
+            <form method="post" action="submit.php">
                 <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" />
+                <input type="text" name="username" placeholder="Username" />
                 <br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" />
+                <input type="password" name="password" placeholder="Password" />
                 <br><br>
-                <input class="login1" type="submit" name="submit" value="login"/>
+                <input type="submit" name="submit" value="login"/>
                 <input type="reset" value="Clear">
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>

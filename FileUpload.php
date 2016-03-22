@@ -35,6 +35,7 @@ if(isset($_FILES['UploadFileField'])) {
 session_destroy()
 ?>
 <!doctype html>
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Ginger Bugginess</title>
@@ -44,37 +45,37 @@ session_destroy()
 
 <body>
 <div id="holder">
-<div id="header">
+	<div id="header">
 	<h1>Ginger Bugginess Fault Tracker</h1>
-</div>
-<div id="NavBar">
+	</div>
+		<div id="NavBar">
 	<nav>
 		<ul>
 			<li><a href="index.php">Home</a></li>
 			<li><a href="index.php">Log Out</a></li>
 		</ul>
 	</nav>
-</div>
-<div class="content">
-	<div id="pageheading">
-		<h1>Welcome</h1>
-	</div>
-	<div id="contentleft">
-		<h2>Welcome to the Ginger Bugginess fault logging page.</h2><br>
-		<h3>File Upload Page.</h3><br>
-		<p>Please upload your file(s)for examination via the provided upload link.</p>
-	</div>
-	<div id="contentright">
-		<div class="fileuploadholder">
-			<form action="FileUpload.php" method="POST" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
-				<label for="UploadFileField"><h2>Upload Your Bugs</h2></label>
-				<input type="file" name="UploadFileField" id="UploadFileField" />
-				<input type="submit" name="UploadButton" id="UploadButton" value="Upload"/>
-			</form>
 		</div>
-		<div class="buglisting">
-			<h1>Ginger Bug List</h1>
-			<div id="bugcontent">
+		<div class="content">
+			<div id="pageheading">
+					<h1>Welcome</h1>
+			</div>
+			<div id="contentleft">
+				<h2>Welcome to the Ginger Bugginess fault logging page.</h2><br>
+					<h3>File Upload Page.</h3><br>
+							<p>Please upload your file(s)for examination via the provided upload link.</p>
+		</div>
+			<div id="contentright">
+				<div class="fileuploadholder">
+					<form action="FileUpload.php" method="POST" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
+						<label for="UploadFileField"><h2>Upload Your Bugs</h2></label>
+						<input type="file" name="UploadFileField" id="UploadFileField" />
+						<input type="submit" name="UploadButton" id="UploadButton" value="Upload"/>
+					</form>
+				</div>
+				<div class="buglisting">
+					<h1>Ginger Bug List</h1>
+						<div id="bugcontent">
 				<?php
 					include("connect.php");
 					$sql="SELECT * FROM bugs";
@@ -85,7 +86,7 @@ session_destroy()
 						echo '<a href="bug.php?id="'.$bugID.'>'.$bugTitle.'</a></br>';
 					}
 				?>
-			</div>
+					</div>
 			<div id="NavBar">
 				<nav>
 					<ul>
@@ -94,7 +95,7 @@ session_destroy()
 				</nav>
 			</div>
 		</div>
-		<div class="comments">
+		<div class="comment">
 			<form action="submit.php" method="POST">
 				<fieldset>
 					<label>Add your comments here:</label>

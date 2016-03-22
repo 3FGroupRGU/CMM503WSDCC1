@@ -36,7 +36,7 @@ echo"<p>".$bugDesc."</p>";
         </nav>
     </div>
 <div class="content">
-    <form class="bugInfo">
+    <form action="submit.php" methos="POST" class="bugInfo">
    <label>Bug Title:</label>
     <input type="text" name="bugTitle" placeholder="Bug Title"><br>
     <label>Bug Description</label><br>

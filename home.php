@@ -3,6 +3,7 @@
 $user_check=$_SESSION['username'];
 ?>
 <!doctype html>
+<html>
 <head>
 <meta charset="utf-8">
 <title>Home</title>

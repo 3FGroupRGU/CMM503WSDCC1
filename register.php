@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once 'connect.php';
 include("connect.php");
 include("submit.php");
 
@@ -8,6 +8,7 @@ include("submit.php");
 session_destroy()
 ?>
 <!doctype html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
@@ -46,11 +47,11 @@ session_destroy()
             <br><br>
             <form method="post" action="submit.php">
                 <label>Username:</label><br>
-                <input type="text" size="25" name="username" placeholder="username" required="required"/><br><br>
+                <input type="text" size="25" name="username" placeholder="Username" required="required"/><br><br>
                 <label>Password:</label><br>
-                <input type="password" size="25" name="password" placeholder="password" required="required" /> <br><br>
+                <input type="password" size="25" name="password" placeholder="Password" required="required" /> <br><br>
                 <label>E-mail</label><br>
-                <input type="email" size="25" name="email" placeholder="e-mail" required="required" /><br><br>
+                <input type="email" size="25" name="email" placeholder="E-mail" required="required" /><br><br>
                 <label>Work No:</label><br>
                 <input type="tel" name="telephone" placeholder="Work Telephone" required="required" /><br><br>
                 <input type="submit" name="submit" value="Register"/>

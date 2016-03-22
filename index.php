@@ -8,7 +8,7 @@ header('Location: home.php');
 session_destroy()
 ?>
 <!doctype html>
-<!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
+<html>
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
