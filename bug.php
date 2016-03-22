@@ -19,6 +19,7 @@ echo"<p>".$bugDesc."</p>";
     <link rel="stylesheet" href="menu.css" type="text/css" />
 </head>
 <body>
+<div id="holder">
 <div id="content">
     <form class="bugInfo">
    <label>Bug Title:</label>
@@ -37,6 +38,7 @@ echo"<p>".$bugDesc."</p>";
             print $ch1;
         ?>
     </form>
+</div>
 </div>
 </body>
 
