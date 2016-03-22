@@ -8,9 +8,7 @@ if (ini_get("session.use_cookies")){
 		$params["secure"], $params["httponly"]
 	);
 }
-session_destroy()
-?>
-<?php
+
 if(isset($_FILES['UploadFileField'])) {
 	// Create the Variables needed to upload the file
 	$UploadName = $_FILES ['UploadFileField']['name'];
@@ -34,7 +32,7 @@ if(isset($_FILES['UploadFileField'])) {
 		move_uploaded_file($UploadTmp, "Upload/$UploadName");
 	}
 }
-include("bug.php");
+session_destroy()
 ?>
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
@@ -59,7 +57,7 @@ include("bug.php");
 		</ul>
 	</nav>
 </div>
-<div id="content">
+<div class="content">
 	<div id="pageheading">
 		<h1>Welcome</h1>
 	</div>
@@ -101,7 +99,7 @@ include("bug.php");
 		<div class="comments">
 			<form action="submit.php" method="POST">
 				<fieldset>
-					<legend>Add your comments here:</legend>
+					<label>Add your comments here:</label>
 					<textarea rows="5" cols="auto" name="comment"></textarea>
 					<input type="hidden" name="username" value="'.$username'">
 					<input type="hidden" name="time" value="'.$time'">
