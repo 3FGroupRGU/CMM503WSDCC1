@@ -13,6 +13,7 @@ echo"<p>".$bugDesc."</p>";
 
 ?>
 <!doctype html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
@@ -38,16 +39,16 @@ echo"<p>".$bugDesc."</p>";
     <form class="bugInfo">
    <label>Bug Title:</label>
     <input type="text" name="BugTitle" placeholder="Bug Title"><br>
-    <label>Bug Description</label>
+    <label>Bug Description</label><br>
     <input type="text" name="BugDesc" placeholder="Bug Description"><br>
-        <label>User ID</label>
+        <label>User ID</label><br>
         <input type="text" name="$userID" placeholder="User ID"><br>
-        <label>Date Bug Raised</label>
+        <label>Date Bug Raised</label><br>
         <input type="date" name="date" placeholder="Date Of Bug"><br>
-        <label>Date Bug Fixed</label>
+        <label>Date Bug Fixed</label><br>
         <input type="date" name="date" placeholder="Date Fixed"><br>
-        <label>If checked IT has fixed Bug</label>
-        <input type="Checkbox" name=".$ch1" value="Fixed">
+        <label>If checked IT has fixed Bug</label><br>
+        <input type="Checkbox" name="$ch1" value="Fixed">
         <?php
             print $ch1;
         ?>
