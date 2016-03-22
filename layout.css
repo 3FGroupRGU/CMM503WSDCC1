@@ -108,14 +108,24 @@ title {
     width: 100%;
     height: auto;
     margin: 60px auto 0px auto;
-    background-color: #e5e5e5;
+    background-color: #ffbbaa;
     border: 10px;
-    border-color: #222222;
+    border-color: #1e5eb6;
     padding: 4px;
 
 }
 
 .comments {
+    margin: 10px auto 0px auto;
+    height: 600px;
+    width: 100%;
+    border: ridge;
+    border: 5px;
+    background-color: coral;
+    padding: 4px
+}
+
+.bugInfo {
     margin: 10px auto 0px auto;
     height: 600px;
     width: 100%;
