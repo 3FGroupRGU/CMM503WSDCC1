@@ -1,4 +1,5 @@
 <?php
+include("connect.php");
 $msg = "";
 if(isset($_POST["submit"]))
 {
