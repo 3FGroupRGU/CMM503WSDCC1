@@ -21,6 +21,12 @@ while ($row=mysqli_fetch_assoc($result)){
 }
 ?>
 <!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>Ginger Bugginess</title>
+    <link rel="stylesheet" href="layout.css" type="text/css" />
+    <link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
 <body>
 <div id="content">
     <form class="bugInfo">

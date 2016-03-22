@@ -104,7 +104,7 @@ title {
     padding: 4px;
 }
 
-.bugcontent {
+.content {
     width: 100%;
     height: auto;
     margin: 60px auto 0px auto;
@@ -117,10 +117,10 @@ title {
 
 .comments {
     margin: 10px auto 0px auto;
-    height: auto;
-    width: auto;
+    height: 600px;
+    width: 100%;
     border: ridge;
     border: 5px;
-    background-color: #e5e5e5;
+    background-color: coral;
     padding: 4px
 }
