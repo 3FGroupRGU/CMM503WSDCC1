@@ -3,7 +3,6 @@ session_start();
 
 include("connect.php"); //Establishing connection with our database
 
-
 {
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
@@ -13,13 +12,6 @@ include("connect.php"); //Establishing connection with our database
         // Define $username and $password
         $username=$_POST['username'];
         $password=$_POST['password'];
-
-        // To protect from MySQL injection
-        $username = stripslashes($username);
-        $password = stripslashes($password);
-        $username = mysqli_real_escape_string($db, $username);
-        $password = mysqli_real_escape_string($db, $password);
-        $password = md5($password);
 
         //Check username and password from database
         $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
