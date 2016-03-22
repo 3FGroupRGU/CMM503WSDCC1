@@ -94,7 +94,6 @@ include("bug.php");
 				<nav>
 					<ul>
 						<li><a href="bug.php">Bug List</a></li>
-						<li><a href="index.php">Log Out</a></li>
 					</ul>
 				</nav>
 			</div>
