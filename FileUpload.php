@@ -102,7 +102,7 @@ include("bug.php");
 			<form action="submit.php" method="POST">
 				<fieldset>
 					<legend>Add your comments here:</legend>
-					<textarea rows="5" cols="20" name="comment"></textarea>
+					<textarea rows="5" cols="auto" name="comment"></textarea>
 					<input type="hidden" name="username" value="'.$username'">
 					<input type="hidden" name="time" value="'.$time'">
 				</fieldset>
