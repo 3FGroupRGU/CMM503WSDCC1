@@ -73,7 +73,7 @@ session_destroy()
         <div class="loginBox">
             <h3>Login Form</h3>
             <br><br>
-            <form method="post" action="home.php">
+            <form method="post" action="index.php">
                 <label>Username:</label><br>
                 <input type="text" name="username" placeholder="Username" />
                 <br><br>
