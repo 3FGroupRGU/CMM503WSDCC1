@@ -30,7 +30,7 @@ echo"<p>".$bugDesc."</p>";
             </ul>
         </nav>
     </div>
-<div id="content">
+<div class="content">
     <form class="bugInfo">
    <label>Bug Title:</label>
     <input type="text" name="BugTitle" placeholder="Bug Title"><br>
