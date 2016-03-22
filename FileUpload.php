@@ -98,9 +98,15 @@ include("bug.php");
 				</nav>
 			</div>
 		</div>
-		<div class="bugcontent">
-			<form method="post"  action="FileUpload.php">
-
+		<div class="comments">
+			<form action="submit.php" method="POST">
+				<fieldset>
+					<legend>Add your comments here:</legend>
+					<textarea rows="5" cols="20" name="comment"></textarea>
+					<input type="hidden" name="username" value="'.$username'">
+					<input type="hidden" name="time" value="'.$time'">
+				</fieldset>
+				<p><input type="submit" value="Post Comment"></p>
 			</form>
 		</div>
 		<div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
