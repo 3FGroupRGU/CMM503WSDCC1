@@ -126,11 +126,13 @@ title {
 }
 
 .bugInfo {
+    text-align: left;
+    font-family: Arial, Verdana;
     margin: 10px auto 0px auto;
     height: 600px;
-    width: 100%;
+    width: 50%;
     border: ridge;
     border: 5px;
-    background-color: coral;
+    background-color: #ffbbaa;
     padding: 4px
 }
