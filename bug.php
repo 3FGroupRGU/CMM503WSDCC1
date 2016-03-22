@@ -36,8 +36,22 @@ while ($row=mysqli_fetch_assoc($result)){
     <input type="text" name="BugDesc" placeholder="Bug Description"><br>
         <label>User ID</label>
         <input type="text" name="$userID" placeholder="User ID"><br>
+        <label>Date Bug Raised</label>
         <input type="date" name="date" placeholder="Date Of Bug"><br>
+        <label>Date Bug Fixed</label>
         <input type="date" name="date" placeholder="Date Fixed"><br>
+        <?php
+            if (isset($_POST['SUBMIT1'])) {
+
+            }
+        if (isset($ch1=='Fixed')) {
+            $ch1='checked';
+        }
+        ?>
+        <input type="Checkbox" name="ch1" value="Fixed">
+        <?php
+            print $ch1;
+        ?>
     </form>
 </div>
 </body>
