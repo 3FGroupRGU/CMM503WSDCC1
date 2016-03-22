@@ -28,12 +28,13 @@ if(isset($_FILES['UploadFileField'])) {
 
 	}
 	// Checks a file has been Selected and Uploads then into a Directory on your Server
-	if(!UploadTmp) {
+	if($UploadTmp) {
 		die("No File Selected, Please Upload Again");
 	}else{
 		move_uploaded_file($UploadTmp, "Upload/$UploadName");
 	}
 }
+include("bug.php");
 ?>
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
@@ -89,21 +90,20 @@ if(isset($_FILES['UploadFileField'])) {
 					}
 				?>
 			</div>
-			<div class="comments">
-				<form action="FileUpload.php" method="POST" id="FileUploadForm">
-					<dl>
-						<dt>Comment:</dt>
-						<dd>
-							<textarea name="comments"></textarea>
-						</dd>
-					</dl>
-				</form>
+			<div id="NavBar">
+				<nav>
+					<ul>
+						<li><a href="bug.php">Bug List</a></li>
+						<li><a href="index.php">Log Out</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
-		<div class="bugcontent"><?php
-				include("bug.php");
-			?>
-			?></div>
+		<div class="bugcontent">
+			<form method="post"  action="FileUpload.php">
+
+			</form>
+		</div>
 		<div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 	</div>
 </div>
