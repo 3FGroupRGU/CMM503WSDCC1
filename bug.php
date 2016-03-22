@@ -38,11 +38,11 @@ echo"<p>".$bugDesc."</p>";
 <div class="content">
     <form class="bugInfo">
    <label>Bug Title:</label>
-    <input type="text" name="BugTitle" placeholder="Bug Title"><br>
+    <input type="text" name="bugTitle" placeholder="Bug Title"><br>
     <label>Bug Description</label><br>
-    <input type="text" name="BugDesc" placeholder="Bug Description"><br>
+    <textarea name="bugDesc" rows="5" cols="40" placeholder="Bug Description"></textarea><br>
         <label>User ID</label><br>
-        <input type="text" name="$userID" placeholder="User ID"><br>
+        <input type="text" name="userID" placeholder="User ID"><br>
         <label>Date Bug Raised</label><br>
         <input type="date" name="date" placeholder="Date Of Bug"><br>
         <label>Date Bug Fixed</label><br>
