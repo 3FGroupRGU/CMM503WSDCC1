@@ -1,4 +1,5 @@
 <?php
+require_once 'connect.php';
 include("connect.php");
 $sql="SELECT * FROM bugs WHERE bugs.ID=".$_GET["id"];
 $result=mysqli_query($db,$sql);
@@ -20,6 +21,9 @@ echo"<p>".$bugDesc."</p>";
 </head>
 <body>
 <div id="holder">
+    <div id="header">
+        <h1>Ginger Bugginess Fault Tracker</h1>
+    </div>
     <div id="NavBar">
         <nav>
             <ul>
