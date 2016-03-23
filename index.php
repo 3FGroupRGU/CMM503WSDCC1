@@ -45,7 +45,8 @@ session_destroy()
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
         </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+    </div>
 </body>
 </html>
 

@@ -70,10 +70,10 @@ session_destroy()
         <p>Once the registration form has been submitted it will be assessed by the IT team prior to your accessibility to the site.</p>
     </div>
     <div id="contentright">
-        <div class="loginBox">
+        <div class="loginBox">-
             <h3>Login Form</h3>
             <br><br>
-            <form method="post" action="home.php">
+            <form method="post" action="login.php">
                 <label>Username:</label><br>
                 <input type="text" name="username" placeholder="Username" />
                 <br><br>

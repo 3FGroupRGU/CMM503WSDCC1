@@ -68,7 +68,7 @@ session_destroy()
 			<div id="contentright">
 				<div class="fileuploadholder">
 					<form action="FileUpload.php" method="POST" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
-						<label for="UploadFileField"><h2>Upload Your Bugs</h2></label>
+						<label for="UploadFileField"><strong><em>Upload Your Bugs</em></strong></label>
 						<input type="file" name="UploadFileField" id="UploadFileField" />
 						<input type="submit" name="UploadButton" id="UploadButton" value="Upload"/>
 					</form>
@@ -96,15 +96,24 @@ session_destroy()
 			</div>
 		</div>
 		<div class="comment">
-			<form action="submit.php" method="POST">
-				<fieldset>
-					<label>Add your comments here:</label>
-					<textarea rows="5" cols="auto" name="comment"></textarea>
-					<input type="hidden" name="username" value="'.$username'">
-					<input type="hidden" name="time" value="'.$time'">
-				</fieldset>
-				<p><input type="submit" value="Post Comment"></p>
-			</form>
+            <?php
+
+            date_default_timezone_set('UTC') ;
+            $time = date( ' H:i , F j ' ) ;
+            $user = '#' ;
+
+            echo '
+                <form action="submit.php" method="POST">
+                        <fieldset>
+                            <legend>Send us your comments</legend>
+                                <textarea rows="5" cols="20" name="comment"></textarea>
+                                <input type="hidden" name="user" value=" '. $user .' ">
+                                <input type="hidden" name="time" value=" '. $time.' ">
+                        </fieldset>
+                    <p><input type="submit" ></p>
+                </form> ' ;
+
+            ?>
 		</div>
 		<div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 	</div>
