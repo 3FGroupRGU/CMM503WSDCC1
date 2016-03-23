@@ -2,8 +2,6 @@
 session_start();
 require_once 'connect.php';
 include("connect.php");
-include("submit.php");
-
 
 session_destroy()
 ?>
@@ -45,7 +43,7 @@ session_destroy()
         <div class="loginBox">
             <h3>Registration Form</h3>
             <br><br>
-            <form method="post" action="submit.php">
+            <form method="post" action="login.php">
                 <label>Username:</label><br>
                 <input type="text" size="25" name="username" placeholder="Username" required="required"/><br><br>
                 <label>Password:</label><br>
