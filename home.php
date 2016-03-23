@@ -28,7 +28,7 @@ session_destroy()
 </nav>
 </div>
 <header>
-<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
+<h1 class="hello">Hello, <em><?php echo $username;?>!</em></h1>
 	</header>
 <br><br>
 <h2><em>You are now logged in as an official user</em></h2>
