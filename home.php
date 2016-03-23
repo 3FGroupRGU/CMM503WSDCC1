@@ -1,6 +1,8 @@
-<?php 
+<?php
+ session_start();
  include("check.php");
 $user_check=$_SESSION['username'];
+session_destroy()
 ?>
 <!doctype html>
 <html>
