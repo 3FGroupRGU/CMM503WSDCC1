@@ -15,7 +15,7 @@ include("connect.php"); //Establishing connection with our database
         echo "creating sql";
         //Check username and password from database
         $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
-        $result=mysqli_query($db,$sql);
+        $result=mysqli_query($db,$sql) or die(mysqli_error($db));
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
 
         //If username and password exist in our database then create a session.
