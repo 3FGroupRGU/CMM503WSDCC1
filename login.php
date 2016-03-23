@@ -12,19 +12,19 @@ include("connect.php"); //Establishing connection with our database
         // Define $username and $password
         $username=$_POST['username'];
         $password=$_POST['password'];
-
+        echo "creating sql";
         //Check username and password from database
         $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
         $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
-
+    var_dump($result);
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
-
+        echo "checking responsel";
         if(mysqli_num_rows($result) == 1)
         {
             $_SESSION['username'] = $username; // Initializing Session
-            header("location: home.php"); // Redirecting To Other Page
+            //header("location: home.php"); // Redirecting To Other Page
         }else
         {
             $error = "Incorrect username or password.";
