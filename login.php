@@ -38,8 +38,8 @@ if (isset($_POST["submit"]))
         {
 
             $_SESSION['username'] = $username; // Initializing Session
-            echo $_SESSION['username'];
-            //header("location: home.php"); // Redirecting To Other Page
+            //echo $_SESSION['username'];
+            header("location: home.php"); // Redirecting To Other Page
         }else
         {
             $error = "Incorrect username or password.";
