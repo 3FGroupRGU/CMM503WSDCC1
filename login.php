@@ -16,17 +16,17 @@ if (isset($_POST["submit"]))
         $password=$_POST['password'];
         echo "creating sql";
 
-        $username = stripcslashes($db, $name);
+        $username = stripcslashes($db, $username);
         $password= stripslashes($db, $password);
-        $username = mysqli_real_escape_string($db, $name);
+        $username = mysqli_real_escape_string($db, $username);
         $password = mysqli_real_escape_string($db, $password);
         $password = md5($password);
 
         //Check username and password from database
-        $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
+        $sql="SELECT userID FROM users";
         $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
-
+var_dump($result);
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
         echo "checking response";
