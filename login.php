@@ -3,6 +3,8 @@ session_start();
 require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
 
+$error ="";
+if (isset($_POST["submit"]))
 {
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
@@ -13,6 +15,11 @@ include("connect.php"); //Establishing connection with our database
         $username=$_POST['username'];
         $password=$_POST['password'];
         echo "creating sql";
+        $name = mysqli_real_escape_string($db, $name);
+        $email = mysqli_real_escape_string($db, $email);
+        $password = mysqli_real_escape_string($db, $password);
+        $password = md5($password);
+        
         //Check username and password from database
         $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
         $result=mysqli_query($db,$sql);
