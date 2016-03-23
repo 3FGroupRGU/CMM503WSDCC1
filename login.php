@@ -15,11 +15,13 @@ if (isset($_POST["submit"]))
         $username=$_POST['username'];
         $password=$_POST['password'];
         echo "creating sql";
-        $name = mysqli_real_escape_string($db, $name);
-        $email = mysqli_real_escape_string($db, $email);
+
+        $username = stripcslashes($db, $name);
+        $password= stripslashes($db, $password);
+        $username = mysqli_real_escape_string($db, $name);
         $password = mysqli_real_escape_string($db, $password);
         $password = md5($password);
-        
+
         //Check username and password from database
         $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
         $result=mysqli_query($db,$sql);
