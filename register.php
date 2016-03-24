@@ -42,18 +42,15 @@ session_destroy()
             <br><br>
             <form method="post" action="registermain.php">
                 <p>Username:<br><input type="text" name="Username" value="<?php if (isset($_POST['username']))
-                    echo $_POST['username'];?>"</p>
+                    echo $_POST['username'];?>" placeholder="Username"</p>
                 <p>Email Address:<br><input type="text" name="email" value="<?php if (isset($_POST['email']))
-                    echo $_POST['email'];?>"</p>
+                    echo $_POST['email'];?>" placeholder="E-mail Address"</p>
                 <p>Password:<br><input type="password" name="pass1" value="<?php if(isset($_POST['pass1']))
-                    echo $_POST['pass1'];?>"</p>
+                    echo $_POST['pass1'];?>" placeholder="Password"</p>
                 <p>Confirm Password:<br><input type="password" name="pass2" value="<?php if (isset($_POST['pass2']))
-                    echo $_POST['pass2'];?>"</p>
-                <p><fieldset><legend>Phone Number<br></legend>
-                <input id="areaCode" title="Area Code"
-                type="text" size="5" value="Area Code">
-                <input id="mainNbr" name="mainNbr" title="Main Telephone Number" type="text" size="6" value="Main Telephone Number">
-                <input id="extension" name="extension" title="Office Extension Number" type="text" size="4" value="Office extension"></fieldset></p>
+                    echo $_POST['pass2'];?>" placeholder="Confirm Password"</p>
+                <p>Phone Number:<br><input type="number" name="telNo" value="<?php if (isset($_POST['telNo']))
+                        echo $_POST['telNo'];?>" placeholder="Telephone Number"</p>
                 <p>
                 <input type="submit" name="submit" value="Register"/>
                 </p>
