@@ -1,8 +1,66 @@
 <?php
 session_start();
-require_once 'connect.php';
-include("connect.php");
 
+$page_title = 'Register';
+include ('includes/header.html');
+if ($_SERVER ['request_method']== 'POST') {
+    require_once 'connect.php';
+    include("connect.php");
+    $errors = array();
+    if (empty($_POST ['username'])) {
+        $errors [] = 'Enter your Username!';
+    } else {
+        $username = mysqli_real_escape_string($db, trim($_POST['username']));
+    }
+    if (empty($_POST['email']))
+    {
+        $errors []= mysqli_real_escape_string($db,trim($_POST['email']));
+    }
+    if(!empty($_POST['pass1']!=$_POST['pass2']))
+    {
+        $errors[]='Passwords do not match!';
+    }
+    else
+    {
+        $password=mysqli_real_escape_string($db,trim($_POST['pass1']));
+    }}
+    else
+    {
+      $errors[]='Enter your password!';
+    }
+    if(empty($errors))
+    {
+     $q="SELECT userID FROM users WHERE email='Semail'";
+        $r=mysqli_query($db,$q);
+        if (mysqli_num_rows($r)!=0)
+        {
+            $errors[]='Email address already registered. <a href="login.php'>
+    }
+        if(empty($errors))
+        {
+            $q="INSERT INTO users(username,email,password, tel) VALUES($username, $email, SHA1($password), NOW())";
+            $sr=mysqli_query($db,$q);
+            if($r)
+            {
+                echo'<h1>Registered!</h1>
+                <p>You are now registered.</p>
+                <p><a href="login.php"></a></p>';
+            }
+            mysqli_close($db);
+            include("includes/footer.html");
+            exit();
+        }
+        else
+        {
+            echo '<h1>ERROR!</h1>
+            <p id="err_msg">The following error(s) occurred:<br> for each [$errors as $msg]
+            {
+                echo "-msg<br>";
+            }
+            echo "Please try again"</p>';
+            mysqli_close ($db);
+        }
+}
 session_destroy()
 ?>
 <!doctype html>
@@ -24,7 +82,6 @@ session_destroy()
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="login.php">Login</a></li>
-            <li><a href="register.php">Register</a></li>
             <li><a href="ForgotPassword.php">Forgot Login</a></li>
         </ul>
     </nav>
@@ -43,17 +100,20 @@ session_destroy()
         <div class="loginBox">
             <h3>Registration Form</h3>
             <br><br>
-            <form method="post" action="login.php">
-                <label>Username:</label><br>
-                <input type="text" size="25" name="username" placeholder="Username" required="required"/><br><br>
-                <label>Password:</label><br>
-                <input type="password" size="25" name="password" placeholder="Password" required="required" /> <br><br>
-                <label>E-mail</label><br>
-                <input type="email" size="25" name="email" placeholder="E-mail" required="required" /><br><br>
-                <label>Work No:</label><br>
-                <input type="tel" name="telephone" placeholder="Work Telephone" required="required" /><br><br>
+            <form method="post" action="register.php">
+                <p>Username:<input type="text" name="Username" value="<?php if (isset($_POST['username']))
+                    echo $_POST['username'];?>"</p>
+                <p>Email Address:<input type="text" name="email" value="<?php if (isset($_POST['email']))
+                    echo $_POST['email'];?>"</p>
+                <p>Password:<input type="password" name="pass1" value="<?php if(isset($_POST['pass1']))
+                    echo $_POST['pass1'];?>"</p>
+                <p>Confirm Password:<input type="password" name="pass2" value="<?php if (isset($_POST['pass2']))
+                    echo $_POST['pass2'];?>"</p>
+                <p>
                 <input type="submit" name="submit" value="Register"/>
+                </p>
             </form>
+            <?php include('includes/footer.html');?>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 
         </div>
