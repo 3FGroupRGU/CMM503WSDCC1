@@ -9,7 +9,7 @@ if(isset($_SESSION['userID'])) {
 if(isset($_FILES['UploadFileField'])) {
 	// Create the Variables needed to upload the file
 	$UploadName = $_FILES ['UploadFileField']['name'];
-	$UploadName = mt_rand (100000, 999999) .$UploadName;
+	$UploadName = mt_rand (100000, 9999999) .$UploadName;
 	$UploadTmp = $_FILES ['UploadFileField']['tmp_name'];
 
 	$UploadType = $_FILES ['UploadFileField']['type'];
