@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("check.php");
 if(isset($_SESSION['userID'])) {
 }else{
 	header('location: login.php');
@@ -42,6 +41,7 @@ session_destroy()
 				<nav>
 						<ul>
 								<li><a href="index.php">Home</a></li>
+								<li><a href="updateaccount.php">Change Account Info</a></li>
 								<li><a href="index.php">Log Out</a></li>
 							</ul>
 					</nav>
