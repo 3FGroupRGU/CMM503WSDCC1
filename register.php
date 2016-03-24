@@ -105,6 +105,11 @@ session_destroy()
                     echo $_POST['pass1'];?>"</p>
                 <p>Confirm Password:<input type="password" name="pass2" value="<?php if (isset($_POST['pass2']))
                     echo $_POST['pass2'];?>"</p>
+                <p><fieldset><legend>Phone Number</legend>
+                <input id="areaCode" title="Area Code"
+                type="text" size="5" value="">
+                <input id="mainNbr" name="mainNbr" title="Main Telephone Number" type="text" size="6" value="">
+                <input id="extension" name="extension" title="Office Extension Number" type="text" size="4" value=""></fieldset></p>
                 <p>
                 <input type="submit" name="submit" value="Register"/>
                 </p>
