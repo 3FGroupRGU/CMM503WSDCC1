@@ -9,7 +9,7 @@ require 'connect.php';?>
             $password=$_POST['pass2'];
             $phone=$_POST['telNo'];
 
-            $sql ="INSERT INTO user(username, password, email, phone)Values($username,SHA1($password),$email,$phone)";
+            $mysqli ="INSERT INTO user(username, password, email, phone)Values($username,SHA1($password),$email,$phone)";
 
             header('location: login.php');
         }
