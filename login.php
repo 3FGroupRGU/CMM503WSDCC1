@@ -1,5 +1,4 @@
 <?php
-
 require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
 ?>
@@ -28,25 +27,7 @@ if (isset($_POST['login']))
         $username = mysqli_real_escape_string($db, $username);
         $password = mysqli_real_escape_string($db, $password);
         $password = md5($password);
-
-        //Check username and password from database
-        $sql="SELECT userID FROM users WHERE 'username'='$username' and 'password'='$password'";
-        //$sql="SELECT userID FROM users WHERE username='$username' AND password=SHA1('$password')";
-        $result=mysqli_query($db,$sql);
-        $row=mysqli_fetch_assoc($result);
-
-        echo $sql;
-        //If username and password exist in our database then create a session.
-        //Otherwise echo error.
-        echo " checking response ";
-        echo " rows: ".mysqli_num_rows($result);
-        if(mysqli_num_rows($result) == 1)
-        {
-
-            $_SESSION['username'] = $username; // Initializing Session
-            //echo $_SESSION['username'];
-            header("location: home.php"); // Redirecting To Other Page
-        }else
+        
         {
             $error = "Incorrect username or password.";
         }
