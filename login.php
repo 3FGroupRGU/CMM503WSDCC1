@@ -3,7 +3,7 @@ require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
 ?>
 <?php
-$error ="";
+$errors ="";
 if (isset($_POST['login']))
 {
         $username=$_POST['username'];
@@ -12,27 +12,26 @@ if (isset($_POST['login']))
         $sql="SELECT * FROM user WHERE Username='$username' AND Password='$password'";
         $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_assoc($result);
-        session_start ();
+    {
+        $errors = "Incorrect username or password.";
+    }
+    if(empty($_POST["username"]) || empty($_POST["password"]))
+{
+    $errors = "Both fields are required.";
+}else
+{
+    $username = stripslashes($db, $username);
+    $password= stripslashes($db, $password);
+    $username = mysqli_real_escape_string($db, $username);
+    $password = mysqli_real_escape_string($db, $password);
+    $password = md5($password);
+}
+    session_start ();
         $_SESSION["userID"] = $row['userID'];
         header('location: home.php');
 }
 {
-    if(empty($_POST["username"]) || empty($_POST["password"]))
-    {
-        $error = "Both fields are required.";
-    }else
-    {
-        $username = stripslashes($db, $username);
-        $password= stripslashes($db, $password);
-        $username = mysqli_real_escape_string($db, $username);
-        $password = mysqli_real_escape_string($db, $password);
-        $password = md5($password);
-        
-        {
-            $error = "Incorrect username or password.";
-        }
 
-    }
 }
 ?>
 
