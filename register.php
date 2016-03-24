@@ -4,7 +4,7 @@ session_start();
 session_destroy()
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
@@ -37,7 +37,7 @@ session_destroy()
         Once you have been verified you will be permitted to upload fault files and observe the current status of your logged faults.</p>
     </div>
     <div id="contentright">
-        <div class="loginBox">
+        <div class="registerBox">
             <h3>Registration Form</h3>
             <br><br>
             <form method="post" action="register.php">

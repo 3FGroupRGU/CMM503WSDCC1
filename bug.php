@@ -13,7 +13,7 @@ echo"<p>".$bugDesc."</p>";
 
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
@@ -36,7 +36,7 @@ echo"<p>".$bugDesc."</p>";
         </nav>
     </div>
 <div class="content">
-    <form action="submit.php" methos="POST" class="bugInfo">
+    <form action="submit.php" method="POST" class="bugInfo">
    <label>Bug Title:</label>
     <input type="text" name="bugTitle" placeholder="Bug Title"><br>
     <label>Bug Description</label><br>

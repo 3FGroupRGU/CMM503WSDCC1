@@ -37,7 +37,7 @@ if(isset($_FILES['UploadFileField'])) {
 session_destroy()
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <body>
 <div id="header">
 	<h1>Ginger Bugginess Fault Tracker</h1>
