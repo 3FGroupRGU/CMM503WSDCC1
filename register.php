@@ -40,7 +40,7 @@ session_destroy()
         <div class="registerBox">
             <h3>Registration Form</h3>
             <br><br>
-            <form method="post" action="register.php">
+            <form method="post" action="registermain.php">
                 <p>Username:<br><input type="text" name="Username" value="<?php if (isset($_POST['username']))
                     echo $_POST['username'];?>"</p>
                 <p>Email Address:<br><input type="text" name="email" value="<?php if (isset($_POST['email']))
