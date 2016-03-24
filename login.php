@@ -1,23 +1,29 @@
 <?php
-session_start();
+
 require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
-
+?>
+<?php
 $error ="";
-if (isset($_POST["submit"]))
+if (isset($_POST['login']))
+{
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        $sql="SELECT * FROM user WHERE Username='$username' AND Password='$password'";
+        $result=mysqli_query($db,$sql);
+        $row=mysqli_fetch_assoc($result);
+        session_start ();
+        $_SESSION["userID"] = $row['userID'];
+        header('location: home.php');
+}
 {
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
         $error = "Both fields are required.";
     }else
     {
-
-        // Define $username and $password
-        $username=$_POST['username'];
-        $password=$_POST['password'];
-
-
-        $username = stripcslashes($db, $username);
+        $username = stripslashes($db, $username);
         $password= stripslashes($db, $password);
         $username = mysqli_real_escape_string($db, $username);
         $password = mysqli_real_escape_string($db, $password);
@@ -25,9 +31,9 @@ if (isset($_POST["submit"]))
 
         //Check username and password from database
         //$sql="SELECT userID FROM users WHERE 'username'='$username' and 'password'='$password'";
-        $sql="SELECT userID FROM users WHERE username='$username' AND password=SHA1('$password')";
-        $result=mysqli_query($db,$sql);
-        $row=mysqli_fetch_assoc($result);
+        //$sql="SELECT userID FROM users WHERE username='$username' AND password=SHA1('$password')";
+        //$result=mysqli_query($db,$sql);
+        //$row=mysqli_fetch_assoc($result);
 
         //echo $sql;
         //If username and password exist in our database then create a session.
@@ -89,12 +95,12 @@ if (isset($_POST["submit"]))
             <br><br>
             <form method="post" action="login.php">
                 <label>Username:</label><br>
-                <input type="text" name="username" placeholder="Username" />
+                <input type="text" name="username" placeholder="Username" required="required" />
                 <br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="Password" />
+                <input type="password" name="password" placeholder="Password" required="required" />
                 <br><br>
-                <input type="submit" name="submit" value="login"/>
+                <input type="submit" name="login" value="Login"/>
                 <input type="reset" value="Clear">
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>

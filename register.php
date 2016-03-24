@@ -1,6 +1,18 @@
 <?php
-session_start();
+require 'connect.php';?>
+<?php
+        if(isset($_POST['register'])) {
+            session_start();
+            $username=$_POST['username'];
+            $email=$_POST['email'];
+            $password=$_POST['pass1'];
+            $password=$_POST['pass2'];
+            $phone=$_POST['telNo'];
 
+            $sql =  $q="INSERT INTO user(username, email, password, phone)Values('{$username}','{$email}','{$password}','{$phone}')";
+
+            header('location: login.php');
+        }
 session_destroy()
 ?>
 <!doctype html>
@@ -40,19 +52,19 @@ session_destroy()
         <div class="registerBox">
             <h3>Registration Form</h3>
             <br><br>
-            <form method="post" action="registermain.php">
+            <form method="post" action="register.php">
                 <p>Username:<br><input type="text" name="Username" value="<?php if (isset($_POST['username']))
-                    echo $_POST['username'];?>" placeholder="Username"</p>
+                    echo $_POST['username'];?>" placeholder="Username" required="required"</p>
                 <p>Email Address:<br><input type="text" name="email" value="<?php if (isset($_POST['email']))
-                    echo $_POST['email'];?>" placeholder="E-mail Address"</p>
+                    echo $_POST['email'];?>" placeholder="E-mail Address" required="required"</p>
                 <p>Password:<br><input type="password" name="pass1" value="<?php if(isset($_POST['pass1']))
-                    echo $_POST['pass1'];?>" placeholder="Password"</p>
+                    echo $_POST['pass1'];?>" placeholder="Password" required="required"</p>
                 <p>Confirm Password:<br><input type="password" name="pass2" value="<?php if (isset($_POST['pass2']))
-                    echo $_POST['pass2'];?>" placeholder="Confirm Password"</p>
+                    echo $_POST['pass2'];?>" placeholder="Confirm Password" required="required"</p>
                 <p>Phone Number:<br><input type="number" name="telNo" value="<?php if (isset($_POST['telNo']))
                         echo $_POST['telNo'];?>" placeholder="Telephone Number"</p>
                 <p>
-                <input type="submit" name="submit" value="Register"/>
+                <input type="submit" name="register" value="Register"/>
                 </p>
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
