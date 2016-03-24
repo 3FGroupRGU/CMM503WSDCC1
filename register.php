@@ -45,7 +45,6 @@ if ($_SERVER ['request_method']== 'POST') {
                 <p><a href="login.php"></a></p>';
             }
             mysqli_close($db);
-            include("includes/footer.html");
             exit();
         }
         else
