@@ -30,16 +30,16 @@ if (isset($_POST['login']))
         $password = md5($password);
 
         //Check username and password from database
-        //$sql="SELECT userID FROM users WHERE 'username'='$username' and 'password'='$password'";
+        $sql="SELECT userID FROM users WHERE 'username'='$username' and 'password'='$password'";
         //$sql="SELECT userID FROM users WHERE username='$username' AND password=SHA1('$password')";
-        //$result=mysqli_query($db,$sql);
-        //$row=mysqli_fetch_assoc($result);
+        $result=mysqli_query($db,$sql);
+        $row=mysqli_fetch_assoc($result);
 
-        //echo $sql;
+        echo $sql;
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
-        //echo " checking response ";
-        //echo " rows: ".mysqli_num_rows($result);
+        echo " checking response ";
+        echo " rows: ".mysqli_num_rows($result);
         if(mysqli_num_rows($result) == 1)
         {
 
