@@ -29,7 +29,7 @@ if (isset($_POST["submit"]))
         $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_assoc($result);
 
-        echo $sql;
+        //echo $sql;
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
         //echo " checking response ";
