@@ -19,6 +19,17 @@ if(isset($_SESSION['userID'])) {
     $_SESSION["password"]=$row['password'];
     $_SESSION["telNo"]=$row['phone'];
 ?>
+<?php
+    if(isset($_POST['update'])){
+        $updateusername=$_POST['username'];
+        $updateemail=$_POST['email'];
+        $updatepwd=$_POST['password'];
+        $updatephone=$_POST['telNo'];
+
+        $sql = $db->query("UPDATE user SET username='{$updateusername}', email='{$updateemail}', password='{$updatepwd}', telNo='{$updatephone}'WHERE userID=$user");
+        header('location: updateaccount.php');
+    }
+?>
 
 <!doctype html>
 <html lang="en">
@@ -38,7 +49,7 @@ if(isset($_SESSION['userID'])) {
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="home.php">Main</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="ForgotPassword.php">Forgot Login</a></li>
             </ul>
