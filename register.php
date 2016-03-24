@@ -1,8 +1,9 @@
 <?php
 session_start();
+
 if ($_SERVER ['request_method']== 'POST') {
-    require_once 'connect.php';
     include("connect.php");
+    include("check.php");
     $errors = array();
     if (empty($_POST ['username'])) {
         $errors [] = 'Enter your Username!';
@@ -70,9 +71,9 @@ session_destroy()
 
 <body>
 <div id="holder">
-<div id="header">
-    <h1>Ginger Bugginess Fault Tracker</h1>
-</div>
+    <div id="header">
+        <h1>Ginger Bugginess Fault Tracker</h1>
+    </div>
 <div id="NavBar">
     <nav>
         <ul>

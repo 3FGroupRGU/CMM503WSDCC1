@@ -2,6 +2,7 @@
 session_start();
 require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
+include("logintools.php");
 
 $error ="";
 if (isset($_POST["submit"]))
@@ -17,11 +18,11 @@ if (isset($_POST["submit"]))
         $password=$_POST['password'];
 
 
-        //$username = stripcslashes($db, $username);
-        //$password= stripslashes($db, $password);
-        //$username = mysqli_real_escape_string($db, $username);
-        //$password = mysqli_real_escape_string($db, $password);
-        //$password = md5($password);
+        $username = stripcslashes($db, $username);
+        $password= stripslashes($db, $password);
+        $username = mysqli_real_escape_string($db, $username);
+        $password = mysqli_real_escape_string($db, $password);
+        $password = md5($password);
 
         //Check username and password from database
         //$sql="SELECT userID FROM users WHERE 'username'='$username' and 'password'='$password'";

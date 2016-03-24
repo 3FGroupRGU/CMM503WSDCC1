@@ -6,11 +6,11 @@ $ses_sql = mysqli_query($db,"SELECT username FROM users WHERE username='$user_ch
 
 $row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
 
-$username=$row['username'];
+$login_user=$row['username'];
 
 if(!isset($user_check))
 {
-//header("Location: register.php");
+header("Location: register.php");
 }
 session_destroy()
 ?>

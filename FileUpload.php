@@ -60,11 +60,11 @@ session_destroy()
 			<div id="pageheading">
 					<h1>Welcome</h1>
 			</div>
-			<div id="contentleft">
-				<h2>Welcome to the Ginger Bugginess fault logging page.</h2><br>
+				<div id="contentleft">
+					<h2>Welcome to the Ginger Bugginess fault logging page.</h2><br>
 					<h3>File Upload Page.</h3><br>
 							<p>Please upload your file(s)for examination via the provided upload link.</p>
-		</div>
+				</div>
 			<div id="contentright">
 				<div class="fileuploadholder">
 					<form action="FileUpload.php" method="POST" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
@@ -106,11 +106,11 @@ session_destroy()
                 <form action="submit.php" method="POST">
                         <fieldset>
                             <legend>Send us your comments</legend>
-                                <textarea rows="5" cols="20" name="comment"></textarea>
-                                <input type="hidden" name="user" value=" '. $user .' ">
+                                <textarea rows="5" cols="100" name="comment"></textarea>
+                                <input type="hidden" name="user" value=" '. $username .' ">
                                 <input type="hidden" name="time" value=" '. $time.' ">
                         </fieldset>
-                    <p><input type="submit" ></p>
+                    <p><input type="submit" name="submit" value="Here is the Bug"></p>
                 </form> ' ;
 
             ?>
