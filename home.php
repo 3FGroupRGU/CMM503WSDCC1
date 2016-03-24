@@ -1,4 +1,7 @@
 <?php
+include('connect.php');
+?>
+<?php
 session_start();
 if(isset($_SESSION['userID'])) {
 }else{
