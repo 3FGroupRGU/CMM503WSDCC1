@@ -1,6 +1,5 @@
 <?php
 session_start();
-$page_title = 'Register';
 if ($_SERVER ['request_method']== 'POST') {
     require_once 'connect.php';
     include("connect.php");
