@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 $page_title = 'Register';
-include ('includes/header.html');
 if ($_SERVER ['request_method']== 'POST') {
     require_once 'connect.php';
     include("connect.php");
@@ -113,7 +111,6 @@ session_destroy()
                 <input type="submit" name="submit" value="Register"/>
                 </p>
             </form>
-            <?php include('includes/footer.html');?>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 
         </div>
