@@ -34,7 +34,7 @@ if(empty($errors))
     }
     if(empty($errors))
     {
-        $q="INSERT INTO users(username,email,password, tel) VALUES($username, $email, SHA1($password), NOW())";
+        $q="INSERT INTO users(username,email,password, tel) VALUES('$username', '$email', SHA1('$password'), NOW())";
         $sr=mysqli_query($db,$q);
         if($r)
         {
