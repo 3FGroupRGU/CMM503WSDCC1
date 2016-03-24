@@ -9,7 +9,7 @@ if (isset($_POST['login']))
         $username=$_POST['username'];
         $password=$_POST['password'];
 
-        $sql="SELECT * FROM user WHERE Username='$username' AND Password='$password'";
+        $sql="SELECT userID FROM user WHERE username=$username AND password=$password";
         $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_assoc($result);
     {
