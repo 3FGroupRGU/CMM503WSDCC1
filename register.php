@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("registermain.php");
+
 session_destroy()
 ?>
 <!doctype html>
@@ -33,7 +33,7 @@ session_destroy()
     <div id="contentleft">
         <h2>Please register to use this service.</h2><br>
         <h3>Complete all fields on this form to proceed.</h3>
-        <p>On completion of this form it wuill be submitted to the IT admin team for verification of your status and level within the company.
+        <p>On completion of this form it will be submitted to the IT admin team for verification of your status and level within the company.
         Once you have been verified you will be permitted to upload fault files and observe the current status of your logged faults.</p>
     </div>
     <div id="contentright">
@@ -41,19 +41,19 @@ session_destroy()
             <h3>Registration Form</h3>
             <br><br>
             <form method="post" action="register.php">
-                <p>Username:<input type="text" name="Username" value="<?php if (isset($_POST['username']))
+                <p>Username:<br><input type="text" name="Username" value="<?php if (isset($_POST['username']))
                     echo $_POST['username'];?>"</p>
-                <p>Email Address:<input type="text" name="email" value="<?php if (isset($_POST['email']))
+                <p>Email Address:<br><input type="text" name="email" value="<?php if (isset($_POST['email']))
                     echo $_POST['email'];?>"</p>
-                <p>Password:<input type="password" name="pass1" value="<?php if(isset($_POST['pass1']))
+                <p>Password:<br><input type="password" name="pass1" value="<?php if(isset($_POST['pass1']))
                     echo $_POST['pass1'];?>"</p>
-                <p>Confirm Password:<input type="password" name="pass2" value="<?php if (isset($_POST['pass2']))
+                <p>Confirm Password:<br><input type="password" name="pass2" value="<?php if (isset($_POST['pass2']))
                     echo $_POST['pass2'];?>"</p>
-                <p><fieldset><legend>Phone Number</legend>
+                <p><fieldset><legend>Phone Number<br></legend>
                 <input id="areaCode" title="Area Code"
-                type="text" size="5" value="">
-                <input id="mainNbr" name="mainNbr" title="Main Telephone Number" type="text" size="6" value="">
-                <input id="extension" name="extension" title="Office Extension Number" type="text" size="4" value=""></fieldset></p>
+                type="text" size="5" value="Area Code">
+                <input id="mainNbr" name="mainNbr" title="Main Telephone Number" type="text" size="6" value="Main Telephone Number">
+                <input id="extension" name="extension" title="Office Extension Number" type="text" size="4" value="Office extension"></fieldset></p>
                 <p>
                 <input type="submit" name="submit" value="Register"/>
                 </p>
