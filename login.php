@@ -5,20 +5,24 @@ include("connect.php"); //Establishing connection with our database
 <?php
 $errors ="";
 if (isset($_POST['login']))
-{
+    if(empty($_POST["username"]) || empty($_POST["password"]))
+    {
+        $errors = "Both fields are required.";
+    }else{
         $username=$_POST['username'];
         $password=$_POST['password'];
 
-        $sql="SELECT userID FROM user WHERE username=$username AND password=$password";
+        $sql="SELECT userID FROM user WHERE username='$username' AND password='$password'";
         $result=mysqli_query($db,$sql);
-        $row=mysqli_fetch_assoc($result);
+        if(mysqli_num_rows($result)==1)
+        {
+            header("location: home.php");
+        }
     {
-        $errors = "Incorrect username or password.";
+        $echo = "Incorrect username or password.";
     }
-    if(empty($_POST["username"]) || empty($_POST["password"]))
-{
-    $errors = "Both fields are required.";
-}else
+        ?>
+<?php
 {
     $username = stripslashes($db, $username);
     $password= stripslashes($db, $password);
@@ -29,9 +33,6 @@ if (isset($_POST['login']))
     session_start ();
         $_SESSION["userID"] = $row['userID'];
         header('location: home.php');
-}
-{
-
 }
 ?>
 
