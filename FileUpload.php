@@ -1,22 +1,36 @@
 <?php
 session_start();
-$_SESSION=array();
-if (ini_get("session.use_cookies")){
-	$params=session_get_cookie_params();
-	setcookie(session_name(), '',time() - 42000,
-		$params["path"], $params["domain"],
-		$params["secure"], $params["httponly"]
-	);
+if(isset($_SESSION['userID'])) {
+}else{
+	header('location: login.php');
+}
 }
 
 if(isset($_FILES['UploadFileField'])) {
 	// Create the Variables needed to upload the file
 	$UploadName = $_FILES ['UploadFileField']['name'];
-	$UploadName = mt_rand (100000, 999999) .$UploadName;
+	$UploadName = mt_rand(100000, 999999) . $UploadName;
 	$UploadTmp = $_FILES ['UploadFileField']['tmp_name'];
 	$UploadType = $_FILES ['UploadFileField']['type'];
 	$FileSize = $_FILES ['UploadFileField']['size'];
 
+	$fp = fopen($UploadTmp,'r');
+	$content = fread($fp, filesize($UploadTmp));
+	$content = addslashes($content);
+	fclose($fp);
+
+	if (!get_magic_quotes_gpc()) {
+		$fileName = addslashes($fileName);
+	}
+
+	include 'library/config.php';
+	include 'library/opendb.php';
+
+	$query = "INSERT INTO upload (name, size, type, contnent) VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
+	mysqli_query($query) or die('Error. Query failed');
+	include 'library/closedb.php';
+
+	echo "<br>File $fileName uploaded<br>";
 	// Remove Unwanted Spaces and characters from the files name of the files being uploaded.
 	$UploadName = preg_replace ("#[^a-z0-9.]#i", "", $UploadName);
 	// Upload File Size Limit

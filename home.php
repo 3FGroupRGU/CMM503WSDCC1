@@ -89,22 +89,8 @@ session_destroy()
 									</div>
 							</div>
 						<div class="comment">
-								<?php
-
-								date_default_timezone_set('UTC') ;
-								$time = date( ' H:i , F j ' ) ;
-								$user = '#' ;
-
-								echo '
-                 <form action="submit.php" method="POST">
-                         <fieldset>
-                             <legend>Send us your comments</legend>
-                                <textarea rows="5" cols="100" name="comment"></textarea>
-                                 <input type="hidden" name="user" value=" '. $username .' ">
-                                <input type="hidden" name="time" value=" '. $time.' ">
-                        </fieldset>
-                     <p><input type="submit" name="submit" value="Here is the Bug"></p>
-                 </form> ' ;
+							<?php include ('comment.php');?>
+						</div>
 
  				?>
 							</div>
