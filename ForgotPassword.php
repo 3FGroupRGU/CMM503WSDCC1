@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
 session_start();
 if(isset($_SESSION['userID'])) {
 }else{
-    header('location: login.php');
+    header('location: ForgotPassword.php');
 }
 session_destroy()
 ?>
