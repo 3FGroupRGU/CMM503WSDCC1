@@ -40,7 +40,7 @@ if(isset($_POST['submit']))
             $code=rand(10000,1000000);
             $to = $db_email;
             $subject="Password Reset";
-            $body="This is an automated message. Please DO NOT reply. Click the link below or paste it into the browser's address bar. http://cmm503wscc1.azurewebsites.net/ForgotPassword.php?code=$code&username=$username";
+            $body;"This is an automated message. Please DO NOT reply. Click the link below or paste it into the browser's address bar. http://cmm503wscc1.azurewebsites.net/ForgotPassword.php?code=$code&username=$username";
 
             mysqli_query("UPDATE users SET pass_reset='$code'WHERE username='$username'");
             mail($to, $subject,$body);
@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
 session_start();
 if(isset($_SESSION['userID'])) {
 }else{
-    header('location: ForgotPassword.php');
+    header('location: login.php');
 }
 session_destroy()
 ?>
@@ -84,7 +84,6 @@ session_destroy()
             <li><a href="index.php">Home</a></li>
             <li><a href="login.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
-            <li><a href="ForgotPassword.php">Forgot Login</a></li>
         </ul>
     </nav>
 </div>
