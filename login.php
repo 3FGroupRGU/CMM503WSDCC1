@@ -28,7 +28,7 @@ if (isset($_POST['login']))
     $password= stripslashes($db, $password);
     $username = mysqli_real_escape_string($db, $username);
     $password = mysqli_real_escape_string($db, $password);
-    $password = md5($password);
+    //$password = md5($password);
 }
     session_start ();
         $_SESSION["userID"] = $row['userID'];

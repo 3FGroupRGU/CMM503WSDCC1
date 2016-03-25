@@ -32,7 +32,6 @@ if(isset($_FILES['UploadFileField'])) {
 		move_uploaded_file($UploadTmp, "Upload/$UploadName");
 	}
 }
-session_destroy()
 ?>
 <!doctype html>
 <html lang="en">
