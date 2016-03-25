@@ -11,14 +11,7 @@ if (isset($_POST['login']))
 
         $sql=("SELECT userID FROM user WHERE username='$username' AND password='$password'");
         $result=mysqli_query($db,$sql);
-        if(password_verify($password, $row['password'])){
-        session_start();
-        }
-
-        if(mysqli_num_rows($result)==1)
-        {
-            header("location: home.php");
-        }
+        if(password_verify($password, $row['password']))
 {
     $username = stripslashes($db, $username);
     $password= stripslashes($db, $password);

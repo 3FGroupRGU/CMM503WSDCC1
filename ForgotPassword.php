@@ -4,7 +4,7 @@ if($_GET['code'])
 {
     $get_username=$_GET['username'];
     $get_code=$_GET['code'];
-    $query=mysqli_query("SELECT * FROM users WHERE username='$get_username'");
+    $sql=("SELECT * FROM users WHERE username='$get_username'");
     while($row=mysqli_fetch_assoc($query))
     {
         $db_code=$row['pass_reset'];
@@ -34,9 +34,9 @@ if(isset($_POST['submit']))
             $code=rand(10000,1000000);
             $to = $db_email;
             $subject="Password Reset";
-            $body;"This is an automated message. Please DO NOT reply. Click the link below or paste it into the browser's address bar. http://cmm503wscc1.azurewebsites.net/ForgotPassword.php?code=$code&username=$username";
+            $body="This is an automated message. Please DO NOT reply. Click the link below or paste it into the browser's address bar. http://cmm503wscc1.azurewebsites.net/ForgotPassword.php?code=$code&username=$username";
 
-            mysqli_query("UPDATE users SET pass_reset='$code'WHERE username='$username'");
+            $sql=("UPDATE users SET pass_reset='$code'WHERE username='$username'");
             mail($to, $subject,$body);
             echo "Check your e-mail";
         }
