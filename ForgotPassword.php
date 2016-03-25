@@ -14,13 +14,7 @@ if($_GET['code'])
     {
         if(!$_GET['code']);
     }
-    {
-        echo "<form action='pass_reset_complete.php?code='$get_code' method='POST'> Enter a new password<br>
-                <input type='password' name='newpass'><br>
-                Re-enter you password<br><input type='password' name='newpass1'><p>
-                <input type='hidden' name='username' value='$db_username'>
-                <input type='submit' value='Update Password!'> ";
-    }
+
 }
 
 if(isset($_POST['submit']))
@@ -100,14 +94,15 @@ session_destroy()
         <div class="loginBox">
             <h3>Recovery Form</h3>
             <br><br>
-            <form method="post" action="ForgotPassword.php">
-                <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" required="required"/><br><br>
-                <label>Password:</label><br>
-                <input type="email" name="email" placeholder="e-mail" required="required"/> <br>
-                <br>
-                <input class="login1" type="submit" name="submit" value="Recover"/>
-            </form>
+            <?php
+            {
+                echo "<form action='pass_reset_complete.php?code='$get_code' method='POST'> Enter a new password<br>
+                <input type='password' name='newpass'><br>
+                Re-enter you password<br><input type='password' name='newpass1'><p>
+                <input type='hidden' name='username' value='$db_username'>
+                <input type='submit' value='Update Password!'> ";
+            }
+            ?>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
 </div>
