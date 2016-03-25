@@ -9,7 +9,7 @@ if (isset($_POST['login']))
         $username=$_POST['username'];
         $password=$_POST['password'];
 
-        $sql=("SELECT * FROM user WHERE username='$username'");
+        $sql=("SELECT userID FROM user WHERE username='$username' AND password='$password'");
         $result=mysqli_query($db,$sql);
         if(password_verify($password, $row['password'])){
         session_start();
