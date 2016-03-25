@@ -3,23 +3,25 @@ require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
 ?>
 <?php
-$errors ="";
+$error ="";
 if (isset($_POST['login']))
-    if(empty($_POST["username"]) || empty($_POST["password"]))
-    {
-        $errors = "Both fields are required.";
-    }else{
+
         $username=$_POST['username'];
         $password=$_POST['password'];
 
-        $sql="SELECT userID FROM user WHERE username='$username' AND password='$password'";
+        $sql=$db->query("SELECT userID FROM user WHERE username='$username'");
         $result=mysqli_query($db,$sql);
+        if(password_verify($password, $row['password'])){
+        session_start();
+        }
+
         if(mysqli_num_rows($result)==1)
         {
             header("location: home.php");
-        }
+        }else
     {
-        $echo = "Incorrect username or password.";
+        session_start();
+        $_SESSION["LogInFail"]="Yes";
     }
         ?>
 <?php
@@ -33,7 +35,7 @@ if (isset($_POST['login']))
     session_start ();
         $_SESSION["userID"] = $row['userID'];
         header('location: home.php');
-}
+
 ?>
 
 <!doctype html>
@@ -71,6 +73,13 @@ if (isset($_POST['login']))
         <p>Once the registration form has been submitted it will be assessed by the IT team prior to your accessibility to the site.</p>
     </div>
     <div id="contentright">
+        <?php
+        if(isset($_SESSION["LogInFail"])){
+        ?>
+            <div class="FormElement">LogIn Failed: Please Try Again.</div>
+        <?php
+        }
+        ?>
         <div class="loginBox">
             <h3>Login Form</h3>
             <br><br>

@@ -1,12 +1,65 @@
 <?php
+require('connect.php');
+if($_GET['code'])
+{
+    $get_username=$_GET['username'];
+    $get_code=$_GET['code'];
+    $query=mysqli_query("SELECT * FROM users WHERE username='$get_username'");
+    while($row=mysqli_fetch_assoc($query))
+    {
+        $db_code=$row['pass_reset'];
+        $db_username=$row['username'];
+    }
+    if($get_username==$db_username && $get_code==$db_code)
+    {
+        if(!$_GET['code']);
+    }
+    {
+        echo "<form action='pass_reset_complete.php?code='$get_code' method='POST'> Enter a new password<br>
+                <input type='password' name='newpass'><br>
+                Re-enter you password<br><input type='password' name='newpass1'><p>
+                <input type='hidden' name='username' value='$db_username'>
+                <input type='submit' value='Update Password!'> ";
+    }
+}
+
+if(isset($_POST['submit']))
+{
+    $username=$_POST['username'];
+    $email=$_POST['email'];
+
+    $sql=mysqli_query("SELECT * FROM users WHERE username='$username'");
+    $numrow=mysqli_num_rows($query);
+
+    if($numrow!=0)
+    {
+        while($row= mysqli_fetch_assoc($query)){
+            $db_email=$row['email'];
+        }
+        if($email==$db_email){
+            $code=rand(10000,1000000);
+            $to = $db_email;
+            $subject="Password Reset";
+            $body="This is an automated message. Please DO NOT reply. Click the link below or paste it into the browser's address bar. http://cmm503wscc1.azurewebsites.net/ForgotPassword.php?code=$code&username=$username";
+
+            mysqli_query("UPDATE users SET pass_reset='$code'WHERE username='$username'");
+            mail($to, $subject,$body);
+            echo "Check your e-mail";
+        }
+        else{
+            echo "E-mail is incorrect";
+        }
+    }
+    else{
+       echo "That username does not exist";
+    }
+}
+?>
+<?php
 session_start();
-$_SESSION=array();
-if (ini_get("session.use_cookies")){
-    $params=session_get_cookie_params();
-    setcookie(session_name(), '',time() - 42000,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-    );
+if(isset($_SESSION['userID'])) {
+}else{
+    header('location: login.php');
 }
 session_destroy()
 ?>
@@ -48,7 +101,7 @@ session_destroy()
         <div class="loginBox">
             <h3>Recovery Form</h3>
             <br><br>
-            <form method="post" action="login.php">
+            <form method="post" action="ForgotPassword.php">
                 <label>Username:</label><br>
                 <input type="text" name="username" placeholder="username" required="required"/><br><br>
                 <label>Password:</label><br>
