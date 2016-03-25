@@ -4,7 +4,7 @@ if(isset($_SESSION['userID'])) {
 }else{
 	header('location: login.php');
 }
-}
+
 
 if(isset($_FILES['UploadFileField'])) {
 	// Create the Variables needed to upload the file
@@ -19,16 +19,16 @@ if(isset($_FILES['UploadFileField'])) {
 	$content = addslashes($content);
 	fclose($fp);
 
-	if (!get_magic_quotes_gpc()) {
-		$fileName = addslashes($fileName);
+	//if (!get_magic_quotes_gpc()) {
+		//$fileName = addslashes($fileName);
 	}
 
-	include 'library/config.php';
-	include 'library/opendb.php';
+	//include 'library/config.php';
+	//include 'library/opendb.php';
 
 	$query = "INSERT INTO upload (name, size, type, contnent) VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
 	mysqli_query($query) or die('Error. Query failed');
-	include 'library/closedb.php';
+	//include 'library/closedb.php';
 
 	echo "<br>File $fileName uploaded<br>";
 	// Remove Unwanted Spaces and characters from the files name of the files being uploaded.
@@ -44,7 +44,7 @@ if(isset($_FILES['UploadFileField'])) {
 	}else{
 		move_uploaded_file($UploadTmp, "Upload/$UploadName");
 	}
-}
+
 session_destroy()
 ?>
 <!doctype html>
