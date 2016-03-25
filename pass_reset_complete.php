@@ -4,16 +4,16 @@ require 'connect.php';
 
 <?php
 $newpass=$_POST['newpass'];
-$newpass=$_POST['newpass1'];
+$newpass=$_POST['enc_pass'];
 
 $post_username=$_POST['username'];
 $code=$_GET['code'];
 
-if ($newpass==$newpass1)
+if ($newpass==$enc_pass)
 {
         $en_pass=md5($newpass);
-    mysqli_query("UPDATE users SET password='$enc_pass'WHERE username='$post_username'");
-    mysqli_query("UPDATE users SET pass_reset='0'WHERE username='$post_username'");
+    $sql=("UPDATE users SET password='$enc_pass'WHERE username='$post_username'");
+    $sql=("UPDATE users SET pass_reset='0'WHERE username='$post_username'");
 
     echo "Your password has been reset.<p><a href='login.php'>Click here to log in.</a>";
 }else{
