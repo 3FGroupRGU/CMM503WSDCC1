@@ -11,7 +11,7 @@ require 'connect.php';?>
 
             $StorePassword=password_hash($password,PASSWORD_BCRYPT, array('cost'=>10));
 
-            $sql= $db->query("INSERT INTO user(username, password, email, phone)Values('{$username}',SHA1('{$password}'),'{$email}','{$phone}', '{$StorePassword}')");
+            $sql=("INSERT INTO user(username, password, email, phone)Values('{$username}',SHA1('{$password}'),'{$email}','{$phone}', '{$StorePassword}')");
 
             header('location: login.php');
         }
