@@ -18,11 +18,7 @@ if (isset($_POST['login']))
         if(mysqli_num_rows($result)==1)
         {
             header("location: home.php");
-        }else
-    {
-        session_start();
-        $_SESSION["LogInFail"]="Yes";
-    }
+        }
 {
     $username = stripslashes($db, $username);
     $password= stripslashes($db, $password);
